@@ -1,2 +1,8 @@
-#!/bin/bash
-exec odriveagent  >> /var/log/odriveagent.log 2>&1
+[Unit]
+Description=Odrive Sync Agent
+
+[Service]
+ExecStart=odriveagent
+
+[Install]
+WantedBy=multi-user.target
